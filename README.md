@@ -8,7 +8,7 @@ Time spent: 2 hours
 Completed:
 
 * [x] Required: User can enter a bill amount, choose a tip percentage, and see the tip and total values.
-* [ ] Required: Settings page to change the default tip percentage.
+* [ ] Required: Settings page to change the default tip percentage. (WIP)
 
 ![Video Walkthrough](anim_tip_calculator.gif)
 

@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         tipLabel.text = "$0.0 0"
         totalLabel.text = "$0.00"
+       
+//        self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: "onSettingsButton")
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,4 +45,10 @@ class ViewController: UIViewController {
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
+    
+    func onSettingsButton(sender: AnyObject) {
+        let settingsViewController = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+        navigationController?.pushViewController(settingsViewController, animated: true)
+    }
+
 }
