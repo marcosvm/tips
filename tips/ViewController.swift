@@ -31,6 +31,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let percentSetting = defaults.integerForKey("tip_percent")
+        
+        tipControl.selectedSegmentIndex = percentSetting
+        self.onEditingChange(self)
+    }
+    
     @IBAction func onEditingChange(sender: AnyObject) {
         var tipPercentages = [0.15, 0.18, 0.2]
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
